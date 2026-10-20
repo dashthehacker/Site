@@ -54,3 +54,6 @@ summary::-webkit-details-marker {
     width: 128px;
     height: 128px;
 }
+a {
+    color: red;
+}

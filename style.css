@@ -55,14 +55,22 @@ body:has(details[open]) #welcome {
 body:has(#hidewelcome[open]) #welcome {
     display: none;
 }
-
+body:has(#hidewelcome[open]) #hidewelcome {
+    display: none;
+}
 body:has(#thejamsdetail[open]) #themainiframe {
     display: none;
 }
-
+body:has(#thejamsdetail[open]) #thejamsdetail summary {
+    display: none;
+}
+body:has(#thejamsdetail[open]) #hidewelcome {
+    display: none;
+}
+/*
 body:has(#thejamsdetail[open]) .bgoveride {
     visibility: visible;
-}
+}*/
 
 .bgoveride {
     position: fixed;
