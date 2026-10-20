@@ -1,0 +1,107 @@
+img {
+    margin:auto;
+    white-space: nowrap;
+    display: inline-block;
+    width: 20%;
+}
+
+.snow {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("/assets/other/Snow.gif");
+    background-repeat: repeat;
+    background-size: 48px 48px;
+
+    animation: snowFall 20s linear infinite;
+
+    z-index: 999997;
+    pointer-events: none;
+}
+
+.cars {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: fill;
+
+    z-index: 999999;
+    pointer-events: none;
+    display: block;
+}
+
+@keyframes snowFall {
+    0% {
+        background-position: 0 0;
+    }
+    12.5% {
+        background-position: 25px 64px;
+    }
+    25% {
+        background-position: 50px 128px;
+    }
+    37.5% {
+        background-position: 25px 192px;
+    }
+    50% {
+        background-position: 0 256px;
+    }
+    62.5% {
+        background-position: -25px 320px;
+    }
+    75% {
+        background-position: -50px 384px;
+    }
+    87.5% {
+        background-position: -25px 448px;
+    }
+    100% {
+        background-position: 0 512px;
+    }
+}
+
+.water {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.water::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: url("/assets/other/waves.gif") repeat-x top left;
+    background-size: 512px 100%;
+
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: 999998;
+    visibility: hidden;
+}
+
+.water:has(#waterdrinka[open])::before {
+    visibility: visible;
+}
+
+.clickbutton {
+    display: inline-block;
+    cursor: pointer;
+    width: 20%;
+}
+
+.clickbutton summary img {
+    width: 100%;
+    display: block;
+}
+
+body {
+    margin: 0;
+}

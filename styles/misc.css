@@ -1,0 +1,56 @@
+.banner-basic {
+    height: 32px;
+    font-size: 1pt;
+    visibility: visible;
+}
+
+.rainbow-arrows {
+    background: url("/assets/ui/Rainbow_arrows.gif");
+}
+
+.soulfire {
+    background: url("/assets/other/blinkies/dividers/soulfiredivider.gif");
+}
+
+.fire {
+    background: url("/assets/other/blinkies/dividers/firedivider.gif");
+}
+
+.center {
+    text-align: center;
+}
+
+.center img {
+    margin:auto;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.enlargify {
+    width: 20%;
+}
+
+.bg1 {
+    background: url("/assets/background/space.png");
+}
+
+summary::marker {
+  content: "";
+}
+summary::-webkit-details-marker {
+  display: none;
+} 
+/*
+.colour-fix {
+    background-color: black;
+    color: white;
+}*/
+
+.bypass-arrow::-webkit-details-marker {
+  display:block;
+}
+
+.cover {
+    width: 128px;
+    height: 128px;
+}

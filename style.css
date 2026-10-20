@@ -1,0 +1,86 @@
+#height-fix-thingy {
+    height: 100%;
+    margin: 0;
+} /* only used to make the body a "refrence" so my annoying iframe works */
+
+.title {
+    font-size: 72pt;
+}
+
+#themainiframe {
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    border: none;
+    display: block;
+}
+#thejamsdetail[open] {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#thejams {
+    flex: 1;
+    border: none;
+    width: 100%;
+    height: 100vh;
+}
+
+details {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+/* WEIRD BODY STUFF */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+body {
+    overflow: hidden;
+}
+
+body:has(details[open]) #welcome {
+    visibility: hidden;
+}
+
+body:has(#hidewelcome[open]) #welcome {
+    display: none;
+}
+
+body:has(#thejamsdetail[open]) #themainiframe {
+    display: none;
+}
+
+body:has(#thejamsdetail[open]) .bgoveride {
+    visibility: visible;
+}
+
+.bgoveride {
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    background: rgb(60, 4, 60);
+    /*background-image: url("/assets/background/Main.gif");*/
+    background-repeat: repeat;
+    background-size: 48px 48px;
+    z-index: -999998;
+    pointer-events: none;
+}
+
+#bgoveride2 {
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    background-repeat: repeat;
+    z-index: -999999;
+    pointer-events: none;
+}
